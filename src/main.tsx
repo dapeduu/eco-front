@@ -1,10 +1,31 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
 import './index.css'
+import {
+  Routes,
+  Route,
+  BrowserRouter
+} from "react-router-dom";
+import { DeliveryConfirmation } from './pages/DeliveryConfirmation';
+import { DeliveryList } from './pages/DeliveryList';
+import { Login } from './pages/Login';
+import { Map } from './pages/Map';
+import { Menu } from './pages/Menu';
+import { QrCodeReader } from './pages/QrCodeReader';
+import { SpecificDelivery } from './pages/SpecificDelivery';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter >
+      <Routes>
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/map" element={<Map />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/specific_delivery" element={<SpecificDelivery />} />
+        <Route path="/delivery_list" element={<DeliveryList />} />
+        <Route path="/delivery_confirmation" element={<DeliveryConfirmation />} />
+        <Route path="/qr_code_reader" element={<QrCodeReader />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 )

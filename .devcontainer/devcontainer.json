@@ -17,14 +17,18 @@
     "vscode": {
       // Add the IDs of extensions you want installed when the container is created.
       "extensions": [
-        "dbaeumer.vscode-eslint",
-        "bradlc.vscode-tailwindcss",
-        "csstools.postcss"
-      ],
+		"dbaeumer.vscode-eslint",
+		"bradlc.vscode-tailwindcss",
+		"csstools.postcss",
+		"dsznajder.es7-react-js-snippets",
+		"eamodio.gitlens"
+	],
       "settings": {
         "emmet.includeLanguages": {
           "postcss": "css"
-        }
+        },
+        "editor.tabSize": 2,
+        "reactSnippets.settings.importReactOnTop": false
       }
     }
   },
