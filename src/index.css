@@ -26,6 +26,10 @@
   }
 
   .full-page-container {
-    @apply w-screen h-screen flex items-center justify-center;
+    @apply w-screen h-screen;
+  }
+
+  .center {
+    @apply h-full w-full flex items-center justify-center
   }
 }
