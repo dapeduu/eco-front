@@ -18,7 +18,7 @@
 
   .btn-secondary {
     @apply font-bold text-xl px-10 py-3 rounded-md w-full shadow-md text-center hover:brightness-95;
-    @apply bg-white text-black;
+    @apply bg-white text-black border-2 border-gray-400;
   }
 
   .input {
