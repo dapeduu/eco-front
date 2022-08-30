@@ -21,7 +21,7 @@ export const Login = () => {
             <input className="input" id="cpf" required type="text" placeholder='Insira seu CPF' />
             <input className="input" id="password" required type="password" placeholder='Insira sua senha' />
           </div>
-          <button className="btn" type="submit">Entrar</button>
+          <button className="btn-primary" type="submit">Entrar</button>
         </form>
       </main>
     </div>

@@ -11,8 +11,14 @@
 }
 
 @layer components {
-  .btn {
-    @apply bg-primary text-white font-bold text-xl px-10 py-3 rounded-md w-full;
+  .btn-primary {
+    @apply font-bold text-xl px-10 py-3 rounded-md w-full shadow-md text-center hover:brightness-95;
+    @apply bg-primary text-white;
+  }
+
+  .btn-secondary {
+    @apply font-bold text-xl px-10 py-3 rounded-md w-full shadow-md text-center hover:brightness-95;
+    @apply bg-white text-black;
   }
 
   .input {
