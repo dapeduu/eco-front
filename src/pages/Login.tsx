@@ -10,7 +10,7 @@ export const Login = () => {
   }
 
   return (
-    <div className="w-screen h-screen flex items-center justify-center">
+    <div className="full-page-container">
       <main className="h-96 ">
         <form className="h-full flex flex-col gap-4 justify-between" onSubmit={handleLogin}>
           <div className="text-center px-">

@@ -18,4 +18,8 @@
   .input {
     @apply font-medium text-lg outline-none border-b-2 border-slate-500 focus:border-primary px-2 w-full
   }
+
+  .full-page-container {
+    @apply w-screen h-screen flex items-center justify-center;
+  }
 }
