@@ -1,10 +1,18 @@
+import { useNavigate } from 'react-router-dom';
 import LoginImage from '../assets/login.svg'
 
 export const Login = () => {
+  const navigate = useNavigate();
+
+  const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    navigate('/menu')
+  }
+
   return (
     <div className="w-screen h-screen flex items-center justify-center">
       <main className="h-96 ">
-        <form className="h-full flex flex-col gap-4 justify-between">
+        <form className="h-full flex flex-col gap-4 justify-between" onSubmit={handleLogin}>
           <div className="text-center px-">
             <img className='mx-auto' src={LoginImage} alt="Illustration of person holding a plant" />
             <h1 className="text-2xl font-light">E-CO</h1>
