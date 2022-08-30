@@ -13,6 +13,7 @@ import { Map } from './pages/Map';
 import { Menu } from './pages/Menu';
 import { QrCodeReader } from './pages/QrCodeReader';
 import { SpecificDelivery } from './pages/SpecificDelivery';
+import { RedeemCoupons } from './pages/RedeemCoupons';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -25,6 +26,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <Route path="/delivery_list" element={<DeliveryList />} />
         <Route path="/delivery_confirmation" element={<DeliveryConfirmation />} />
         <Route path="/qr_code_reader" element={<QrCodeReader />} />
+        <Route path="/redeem_coupons" element={<RedeemCoupons />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
