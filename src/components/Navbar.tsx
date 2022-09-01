@@ -9,7 +9,7 @@ export const Navbar = ({ showBackButton }: NavbarProps) => {
   const navigate = useNavigate();
 
   return (
-    <div className="w-screen h-24 bg-primary text-white">
+    <header className="w-screen h-24 bg-primary text-white">
       <div className="h-full container flex justify-evenly items-center px-4">
         <div className="flex-1">
           {showBackButton ? <button className="text-2xl" onClick={() => navigate(-1)}>←</button> : <div />}
@@ -22,6 +22,6 @@ export const Navbar = ({ showBackButton }: NavbarProps) => {
           </span>
         </div>
       </div>
-    </div>
+    </header>
   )
 }
