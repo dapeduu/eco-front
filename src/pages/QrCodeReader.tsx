@@ -1,14 +1,21 @@
 
+import { useState } from 'react';
 import { OnResultFunction, QrReader } from 'react-qr-reader';
 import { useNavigate } from 'react-router-dom';
 
 export const QrCodeReader = () => {
+  const [shouldRenderQrReader, setShouldRenderQrReader] = useState(true)
   const navigate = useNavigate();
 
   const onResult: OnResultFunction = (result, error) => {
     if (error) return console.info("Error while reading qrcode")
 
-    console.log(result)
+    const isCodeValid = true
+
+    if (isCodeValid) {
+      navigate('/delivery_confirmation')
+      setShouldRenderQrReader(false)
+    }
   }
 
   return (
@@ -20,7 +27,7 @@ export const QrCodeReader = () => {
         </div>
       </div>
       <main className='flex items-center justify-center'>
-        <QrReader constraints={{}} className="w-full my-auto" onResult={onResult} />
+        {shouldRenderQrReader && <QrReader constraints={{}} className="w-full my-auto" onResult={onResult} />}
       </main>
     </div>
   )
