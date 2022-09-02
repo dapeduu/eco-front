@@ -8,7 +8,7 @@ export const DeliveryList = () => {
         <h1 className="text-2xl text-center my-3">Minhas entregas</h1>
         <ul className="list-none ">
           <li>
-            <DeliveryItem name="Bateria" situation="Em transito" />
+            <DeliveryItem name="Bateria" situation="Em transito" id="123412" />
           </li>
         </ul>
       </main>
