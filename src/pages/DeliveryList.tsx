@@ -3,7 +3,7 @@ import { NavbarLayout } from "../components/NavbarLayout"
 
 export const DeliveryList = () => {
   return (
-    <NavbarLayout>
+    <NavbarLayout withBackButton>
       <main className="container mx-auto max-w-lg p-3 ">
         <h1 className="text-2xl text-center my-3">Minhas entregas</h1>
         <ul className="list-none ">
