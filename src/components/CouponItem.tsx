@@ -9,7 +9,7 @@ type CouponItemProps = {
 
 export const CouponItem = ({ title, value, description, validUntil }: CouponItemProps) => {
   return (
-    <div className="flex justify-between shadow-md p-2">
+    <div className="flex justify-between p-2 shadow-card">
       <div className="flex-1 flex flex-col justify-between">
         <h2 className="font-bold text-lg">{title} <EcoPoints value={value} /></h2>
         <p className="font-light">{description}</p>
