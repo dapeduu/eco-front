@@ -15,7 +15,7 @@ export const Navbar = ({ showBackButton }: NavbarProps) => {
           {showBackButton ? <button className="text-2xl" onClick={() => navigate(-1)}>←</button> : <div />}
         </div>
         <h1 className="text-3xl">E-CO</h1>
-        <div className="flex-1 text-center text-lg font-medium">
+        <div className="flex-1 text-right text-lg font-medium">
           <span>
             <img className="inline-block mr-1" src={EcoLogo} alt="Símbolo dos Eco points. É ícone de folha de árvore." />
             3000
