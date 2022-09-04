@@ -1,5 +1,4 @@
 import { CouponItem } from "../components/CouponItem"
-import { EcoPoints } from "../components/EcoPoints"
 import { NavbarLayout } from "../components/NavbarLayout"
 
 export const RedeemCoupons = () => {
