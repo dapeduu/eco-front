@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import EcoLogo from '../assets/eco-points.svg'
+import { EcoPoints } from "./EcoPoints";
 
 type NavbarProps = {
   showBackButton?: boolean
@@ -16,10 +16,7 @@ export const Navbar = ({ showBackButton }: NavbarProps) => {
         </div>
         <h1 className="text-3xl">E-CO</h1>
         <div className="flex-1 text-right text-lg font-medium">
-          <span>
-            <img className="inline-block mr-1" src={EcoLogo} alt="Símbolo dos Eco points. É ícone de folha de árvore." />
-            3000
-          </span>
+          <EcoPoints />
         </div>
       </div>
     </header>
