@@ -12,7 +12,7 @@ export const DeliveryConfirmation = () => {
 
   return (
     <NavbarLayout withBackButton>
-      <main className="flex-1 px-4 py-4 flex flex-col justify-between container max-w-lg mx-auto">
+      <main className="flex-1 px-3 py-4 flex flex-col justify-between container max-w-lg mx-auto">
         <h1 className="text-xl font-medium text-center">Informações da Entrega</h1>
         <DeliveryInfo address="Rua alou" category="Baterias" clientName="Jose" deliveryCode={"123jasjdlk"} deliveryPoint="Rua olá" productName="Lalalala" />
         <button onClick={handleConfirmDelivery} className="btn-primary">Confirmar entrega</button>
