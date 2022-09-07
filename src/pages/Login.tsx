@@ -1,12 +1,27 @@
 import { useNavigate } from 'react-router-dom';
 import LoginImage from '../assets/login.svg'
+import api from '../api';
+import { useState } from 'react';
 
 export const Login = () => {
   const navigate = useNavigate();
 
+  const [cpf, setCPF] = useState("")
+
   const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    navigate('/menu')
+    api.post("user",{
+      cpf: "00000000000"//cpf
+    }
+    )
+    .then((res)=>{
+      sessionStorage.setItem("@eco/userId", res.data.id)
+      navigate('/menu')
+    })
+    .catch((err) => {
+      alert(err)
+      console.error(err)
+    })
   }
 
   return (
@@ -19,7 +34,7 @@ export const Login = () => {
               <h1 className="text-2xl font-light">E-CO</h1>
             </div>
             <div className="flex flex-col gap-4">
-              <input className="input" id="cpf" required type="text" placeholder='Insira seu CPF' />
+              <input value={cpf} onChange={(event) => setCPF(event.target.value)} className="input" id="cpf" required type="text" placeholder='Insira seu CPF' />
               <input className="input" id="password" required type="password" placeholder='Insira sua senha' />
             </div>
             <button className="btn-primary" type="submit">Entrar</button>
