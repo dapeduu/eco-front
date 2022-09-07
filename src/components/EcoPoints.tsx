@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react'
+import api from '../api'
 import EcoLogo from '../assets/eco-points.svg'
 
 type EcoPointsProps = {
@@ -15,8 +17,17 @@ export const EcoPoints = ({ value }: EcoPointsProps) => {
       {value}
     </span>
   )
+  const [userEcoPoints, setUserEcoPoints] = useState(0)
 
-  const userEcoPoints = 3000 // TODO: get it from the global state
+  useEffect(()=>{
+    const id = sessionStorage.getItem("@eco/userId")
+    api.get(`user/${id}`)
+    .then((res) => setUserEcoPoints(res.data.ecopoints))
+    .catch((err) => {
+      alert(err)
+      console.error(err)
+    })
+  }, [])
 
   return (
     <span>
