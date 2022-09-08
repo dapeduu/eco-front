@@ -1,18 +1,12 @@
-import { OnResultFunction, QrReader } from 'react-qr-reader';
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { useNavigate } from 'react-router-dom';
+import Html5QrcodePlugin from '../components/Html5QrcodePlugin';
 
 export const QrCodeReader = () => {
   const navigate = useNavigate();
 
-  const onResult: OnResultFunction = (result, error) => {
-    if (error) return console.info("Error while reading qrcode")
-
-    const isCodeValid = true
-
-    if (isCodeValid) {
-      navigate('/delivery_confirmation')
-      console.log('Scanner Result: ' + result?.getText())
-    }
+  const onSuccess = (result: string) => {
+    console.log(result)
   }
 
   return (
@@ -24,7 +18,11 @@ export const QrCodeReader = () => {
         </div>
       </div>
       <main className='flex items-center justify-center container max-w-lg mx-auto '>
-        <QrReader scanDelay={1000} constraints={{}} className="w-full" onResult={onResult} />
+        <Html5QrcodePlugin // @ts-ignore
+          fps={10}
+          qrbox={250}
+          disableFlip={false}
+          qrCodeSuccessCallback={onSuccess} />
       </main>
     </div>
   )

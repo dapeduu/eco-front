@@ -40,4 +40,8 @@
   .modalOverlay {
     @apply top-0 left-0 right-0 bottom-0 fixed bg-slate-900/50
   }
+
+  #html5qr-code-full-region {
+    @apply w-96 h-96
+  }
 }
