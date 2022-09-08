@@ -24,7 +24,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <Route path="/" element={<Login />} />
         <Route path="/specific_delivery/:id" element={<SpecificDelivery />} />
         <Route path="/delivery_list" element={<DeliveryList />} />
-        <Route path="/delivery_confirmation" element={<DeliveryConfirmation />} />
+        <Route path="/delivery_confirmation/:id" element={<DeliveryConfirmation />} />
         <Route path="/qr_code_reader" element={<QrCodeReader />} />
         <Route path="/redeem_coupons" element={<RedeemCoupons />} />
       </Routes>

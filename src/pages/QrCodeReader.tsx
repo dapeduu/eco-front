@@ -1,12 +1,15 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { useNavigate } from 'react-router-dom';
+import api from '../api';
 import Html5QrcodePlugin from '../components/Html5QrcodePlugin';
 
 export const QrCodeReader = () => {
   const navigate = useNavigate();
-
+  let scaneado = false
   const onSuccess = (result: string) => {
-    console.log(result)
+    if(scaneado) return
+      scaneado = true  
+      navigate(`/delivery_confirmation/${result}`)
   }
 
   return (
