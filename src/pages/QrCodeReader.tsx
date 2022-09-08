@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { useNavigate } from 'react-router-dom';
-import api from '../api';
 import Html5QrcodePlugin from '../components/Html5QrcodePlugin';
 
 export const QrCodeReader = () => {

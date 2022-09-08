@@ -76,7 +76,7 @@ export const DeliveryConfirmation = () => {
     <NavbarLayout withBackButton>
       <main className="flex-1 px-3 py-4 flex flex-col justify-between container max-w-lg mx-auto">
         <h1 className="text-xl font-medium text-center">Informações da Entrega</h1>
-        <DeliveryInfo address={delivery.ponto_coleta} category={delivery.categoria} clientName={user.nome} clientCpf={user.cpf} deliveryCode={id || ""} deliveryPoint={delivery.ponto_coleta} productName={delivery.nome_produto} status={delivery.estado} points={delivery.pontuacao} img={delivery.img}/>
+        <DeliveryInfo address={delivery.endereco} category={delivery.categoria} clientName={user.nome} clientCpf={user.cpf} deliveryCode={id || ""} deliveryPoint={delivery.ponto_coleta} productName={delivery.nome_produto} status={delivery.estado} points={delivery.pontuacao} img={delivery.img}/>
         <button onClick={handleConfirmDelivery} className="btn-primary">Confirmar entrega</button>
       </main>
     </NavbarLayout>

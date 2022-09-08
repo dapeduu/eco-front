@@ -35,7 +35,7 @@ export const Map = () => {
           width={50} 
           anchor={[parseFloat(marker.latitude), parseFloat(marker.longitude)]}
           color='green'
-          onClick={() => alert(marker.nome)} 
+          onClick={() => window.open(marker.endereco, '_blank', 'noopener,noreferrer')} 
           />
         )}
         

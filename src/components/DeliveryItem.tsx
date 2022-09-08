@@ -26,7 +26,7 @@ export const DeliveryItem = ({
           <h2 className="text-xl"><b>{nome_produto}</b></h2>
           <p>Situação atual: <b>{legenda[estado]}</b></p>
         </div>
-        <img src={img} alt="Imagem do produto" className="w-28 h-28" />
+        <img src={img} alt="Imagem do produto" className="object-contain w-28 h-28" />
       </div>
     </Link>
   )

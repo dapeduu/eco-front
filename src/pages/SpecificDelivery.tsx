@@ -37,7 +37,7 @@ export const SpecificDelivery = () => {
     <NavbarLayout withBackButton>
       <main className="flex flex-col container max-w-lg mx-auto px-3">
         <h1 className="font-light text-2xl text-center my-3">Informações da entrega</h1>
-        <DeliveryInfo address={delivery.ponto_coleta} category={delivery.categoria} clientName={delivery.nome_usuario} clientCpf={delivery.cpf_usuario} deliveryCode={id || ""} deliveryPoint={delivery.ponto_coleta} productName={delivery.nome_produto} status={delivery.estado} points={delivery.pontuacao} img={delivery.img}/>
+        <DeliveryInfo address={delivery.endereco} category={delivery.categoria} clientName={delivery.nome_usuario} clientCpf={delivery.cpf_usuario} deliveryCode={id || ""} deliveryPoint={delivery.ponto_coleta} productName={delivery.nome_produto} status={delivery.estado} points={delivery.pontuacao} img={delivery.img}/>
       </main>
     </NavbarLayout>
   )
